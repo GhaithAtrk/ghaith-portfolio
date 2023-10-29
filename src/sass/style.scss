@@ -148,9 +148,11 @@ $btnColor: #c4873c;
   justify-content: center;
   align-items: center;
 
-  div {
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 70px;
-    padding: 50px;
   }
 
   span {
@@ -189,7 +191,9 @@ $btnColor: #c4873c;
       background-color: rgba(255, 255, 255, 0.8);
       max-width: 600px;
       padding: 20px;
-      line-height: 30px;
+      p {
+        line-height: 40px;
+      }
     }
   }
 }
@@ -199,7 +203,6 @@ $btnColor: #c4873c;
 #projects {
   height: 100vh;
   padding: 150px;
-  // position: relative;
 
   h1 {
     margin-bottom: 20px;
@@ -209,14 +212,7 @@ $btnColor: #c4873c;
     display: flex;
     justify-content: space-around;
     padding: 40px 0;
-
-    .item {
-      background-color: rgba(255, 255, 255, 0.8);
-      border: 3px solid rgba(0, 0, 0, 0.8);
-      border-radius: 5px;
-      text-align: center;
-      cursor: pointer;
-    }
+    height: 40vh;
 
     .project {
       border: 3px solid rgba(0, 0, 0, 0.8);
@@ -225,26 +221,37 @@ $btnColor: #c4873c;
     }
   }
 
+  .project-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+
+  button {
+    background-color: $btnColor;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    rotate: -7deg;
+  }
+
   .text {
     margin-top: 40px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 25px;
-    h2 {
-      display: inline;
-    }
 
-    button {
-      background-color: $btnColor;
-      border: none;
-      border-radius: 3px;
-      padding: 5px 15px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      rotate: -7deg;
+    .contact-btn {
+      color: #fff;
+      font-size: 20px;
+      padding: 12px 40px;
     }
   }
 
@@ -272,6 +279,8 @@ $btnColor: #c4873c;
       width: 25px;
       height: 25px;
       border-radius: 50%;
+      display: flex;
+      justify-content: center;
       background-color: $btnColor;
       cursor: pointer;
     }
