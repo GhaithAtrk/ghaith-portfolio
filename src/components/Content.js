@@ -11,22 +11,30 @@ const Content = () => {
           <h1 className="quesiton">What is My Role?</h1>
           <div className="answer-card">
             <p>
-              Simply , to build the front-end of the website you are aiming to
-              have
+              In simple words.. to bring your website to live and advertise your
+              ideas/products/services the way you intended.
+            </p>
+            <p>
+              having it visually stunning, user friendly, responsive and
+              interactive if needed to get your visitors' and potential clients' attention.
+            </p>
+            <p>
+              Taking care of The style, design, colors, and even content if you were missing on any of them.
             </p>
           </div>
         </div>
-        <div className="Animation">
+        <div className="animation">
           <Player
             autoplay
             loop
             src="https://assets5.lottiefiles.com/packages/lf20_kyu7xb1v.json"
             style={{ height: "400px", width: "450px" }}
+            className="animation1"
           ></Player>
         </div>
       </div>
       <div className="section section-2">
-        <div className="Animation">
+        <div className="animation">
           <Player
             autoplay
             loop
@@ -39,9 +47,15 @@ const Content = () => {
           <div className="answer-card">
             <div className="answer">
               <p>
-                To get you have the website that satisfies your needs , where
-                you can have your ideas presented out to the world the way you
-                want them to be
+                To get you as a client satisfied with the end result by:
+                <br />
+                1- Making sure the website represents the idea you want to deliver.
+                <br />
+                2- Making sure the website is functioning well just as planned.
+                <br />
+                3- Making sure the website is functioning well just as planned.
+                <br />
+                4- Making sure the website is functioning well just as planned.
               </p>
             </div>
           </div>
