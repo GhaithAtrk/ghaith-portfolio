@@ -1,0 +1,84 @@
+@media (max-width: 768px) {
+  .header {
+    .logo {
+      h1 {
+        font-size: 20px;
+      }
+    }
+
+    .navbar {
+      ul {
+        display: none;
+      }
+    }
+  }
+
+  // Showcase--------------------------
+
+  .showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+    }
+
+    span.space {
+      padding: 0 5px !important;
+      margin: 0 1px;
+    }
+  }
+
+  .content {
+
+    .section {
+      padding: 0 20px;
+    }
+
+    .section-1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .animation {
+      display: none;
+    }
+
+    .section-2 {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-around;
+      align-items: center;
+      height: 100vh;
+    }
+  }
+
+  // Projects-------------
+
+  #projects {
+    padding: 20px;
+    height: 120vh;
+
+    .project-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0;
+      height: 70vh;
+
+      .project {
+        width: 280px;
+        height: 150px;
+      }
+    }
+  }
+}
