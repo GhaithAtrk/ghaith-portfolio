@@ -16,10 +16,12 @@ const Content = () => {
             </p>
             <p>
               having it visually stunning, user friendly, responsive and
-              interactive if needed to get your visitors' and potential clients' attention.
+              interactive if needed to get your visitors&apos; and potential clients&apos;
+              attention.
             </p>
             <p>
-              Taking care of The style, design, colors, and even content if you were missing on any of them.
+              Taking care of The style, design, colors, and even content if you
+              were missing on any of them.
             </p>
           </div>
         </div>
@@ -29,7 +31,6 @@ const Content = () => {
             loop
             src="https://assets5.lottiefiles.com/packages/lf20_kyu7xb1v.json"
             style={{ height: "400px", width: "450px" }}
-            className="animation1"
           ></Player>
         </div>
       </div>
@@ -49,7 +50,8 @@ const Content = () => {
               <p>
                 To get you as a client satisfied with the end result by:
                 <br />
-                1- Making sure the website represents the idea you want to deliver.
+                1- Making sure the website represents the idea you want to
+                deliver.
                 <br />
                 2- Making sure the website is functioning well just as planned.
                 <br />

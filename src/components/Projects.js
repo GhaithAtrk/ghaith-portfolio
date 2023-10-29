@@ -36,9 +36,8 @@ const Projects = () => {
       <div className="project-container">
         {ProjectsInfo.map((project, index) => {
           return (
-            <div>
+            <div key={`project-${index}`}>
               <Image
-                key={`project-${index}`}
                 className="project"
                 src={project.siteImage}
                 alt={project.siteName}
