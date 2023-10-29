@@ -35,7 +35,6 @@
   }
 
   .content {
-
     .section {
       padding: 0 20px;
     }
@@ -79,6 +78,18 @@
         width: 280px;
         height: 150px;
       }
+    }
+
+    .main-swipper {
+      border-radius: 5px;
+      padding-top: 40px;
+      padding-bottom: 10px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 320px;
+      height: 200px;
+      position: fixed;
     }
   }
 }
