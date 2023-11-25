@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import ModeToggle from "./ModeToggle";
+import MenuToggle from "./MenuToggle";
 
 const Header = () => {
   return (
@@ -24,6 +25,7 @@ const Header = () => {
           </li>
         </ul>
         <ModeToggle/>
+        <MenuToggle/>
       </nav>
     </div>
   );

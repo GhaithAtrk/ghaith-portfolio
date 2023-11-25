@@ -20,7 +20,7 @@ const Content = () => {
               attention.
             </p>
             <p>
-              Taking care of The style, design, colors, and even content if you
+              Taking care of the style, design, colors, and even content if you
               were missing on any of them.
             </p>
           </div>
@@ -53,11 +53,11 @@ const Content = () => {
                 1- Making sure the website represents the idea you want to
                 deliver.
                 <br />
-                2- Making sure the website is functioning well just as planned.
+                2- Writing clean code for easier futuar maintenance and update.
                 <br />
-                3- Making sure the website is functioning well just as planned.
+                3- Having your project delivered on time.
                 <br />
-                4- Making sure the website is functioning well just as planned.
+                4- providing support for short period after project being fully delivered.
               </p>
             </div>
           </div>

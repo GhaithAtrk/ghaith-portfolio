@@ -40,56 +40,51 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <h1>You can reach me through..</h1>
+      <h1>For now you can reach me through..</h1>
       <div className="contact-info">
-        <form
+        {/* <form
           id="contact-form"
           className="form-horizontal"
           role="form"
           onSubmit={handleSubmit}
         >
-          <div class="field field_v1">
+          <div className="field field_v1">
             <input
               id="name"
-              class="field__input"
+              className="field__input"
               placeholder="e.g. James"
             />
-            <span class="field__label-wrap" aria-hidden="true">
-              <span class="field__label">Name</span>
+            <span className="field__label-wrap" aria-hidden="true">
+              <span className="field__label">Name</span>
             </span>
           </div>
-          <div class="field field_v2">
+          <div className="field field_v2">
             <input
               id="e-mail"
-              class="field__input"
+              className="field__input"
               placeholder="e.g. james@gmail.com"
             />
-            <span class="field__label-wrap" aria-hidden="true">
-              <span class="field__label">E-mail</span>
+            <span className="field__label-wrap" aria-hidden="true">
+              <span className="field__label">E-mail</span>
             </span>
           </div>
-          <div class="field field_v3">
+          <div className="field field_v3">
             <input
               id="message"
-              class="field__input"
+              className="field__input"
               placeholder="e.g. I'd like to enquire about.."
             />
-            <span class="field__label-wrap" aria-hidden="true">
-              <span class="field__label">Message</span>
+            <span className="field__label-wrap" aria-hidden="true">
+              <span className="field__label">Message</span>
             </span>
           </div>
-          <div class="submit">
-            <input id="submit" type="submit" class="submit-btn" />
+          <div className="submit">
+            <input id="submit" type="submit" className="submit-btn" />
           </div>
-        </form>
+        </form> */}
 
         <div className="direct-contact-container">
           <ul className="contact-list">
-            <li className="list-item">
-              <FontAwesomeIcon icon={faLocationPin} />
-              <span className="contact-text place">Selangor, Malaysia</span>
-            </li>
-
             <li className="list-item">
               <FontAwesomeIcon icon={faPhone} />
               <span className="contact-text phone">
@@ -107,8 +102,17 @@ const Contact = () => {
                 </Link>
               </span>
             </li>
+
+            <li className="list-item">
+              <FontAwesomeIcon icon={faLocationPin} />
+              <span className="contact-text place">Selangor, Malaysia</span>
+            </li>
           </ul>
         </div>
+        <span className="note">(more to be added later)</span>
+        <Link href={"/"}>
+          <button className="home-btn">Home Page</button>
+        </Link>
       </div>
     </div>
   );

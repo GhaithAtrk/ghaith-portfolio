@@ -8,7 +8,7 @@ const ModeToggle = () => {
   const { toggle } = useContext(ThemeContext);
 
   return (
-    <div className="modeToggle" onClick={toggle}>
+    <div className="modeToggle toggle" onClick={toggle}>
       <FontAwesomeIcon className="lamp" icon={faLightbulb} />
     </div>
   );

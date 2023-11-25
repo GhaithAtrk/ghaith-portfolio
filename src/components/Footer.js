@@ -1,7 +1,7 @@
 import React from "react";
 
 const Footer = () => {
-  return <div className="footer">Footer</div>;
+  return <div className="footer">&copy; 2023 Avocode, All Rights Reserved </div>;
 };
 
 export default Footer;

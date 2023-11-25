@@ -51,13 +51,13 @@ const Projects = () => {
               />
               {toggleButtons[index] && (
                 <div className="project-buttons">
-                  <button
+                  {/* <button
                     onClick={() => {
                       setCloseSwiperPopup(false);
                     }}
                   >
                     Show images
-                  </button>
+                  </button> */}
                   <a target="_blank" href={project.siteLink}>
                     <button>Visit Site</button>
                   </a>

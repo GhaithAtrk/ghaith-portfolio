@@ -63,6 +63,16 @@ $btnColor: #c4873c;
   }
 }
 
+@media (min-width: 992px) {
+  .header {
+    .navbar {
+      .menuToggle {
+        display: none !important;
+      }
+    }
+  }
+}
+
 // Header----------
 
 .header {
@@ -103,7 +113,7 @@ $btnColor: #c4873c;
     align-items: center;
     gap: 10px;
 
-    .modeToggle {
+    .toggle {
       border: 1px solid #00000062;
       border-radius: 20px;
       width: 35px;
@@ -189,7 +199,7 @@ $btnColor: #c4873c;
       border: #000 solid 2px;
       border-radius: 5px;
       background-color: rgba(255, 255, 255, 0.8);
-      max-width: 600px;
+      max-width: 650px;
       padding: 20px;
       p {
         line-height: 40px;
