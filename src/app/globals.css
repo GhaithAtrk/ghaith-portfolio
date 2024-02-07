@@ -8,24 +8,45 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.theme {
+  position: relative;
+  background-image: linear-gradient(180deg, #90a955, #4f772d, #31572c);
+  z-index: 1;
+}
+
+.theme::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(180deg, #3e5c76, #1d2d44, #0d1321);
+  z-index: -1;
+  transition: all 0.5s linear;
+  opacity: 0;
+}
+
+.theme.dark::before {
+  opacity: 1;
+}
+
+.letter {
+  user-select: none !important;
+  transition: 0.3s;
+  color: "red";
+}
+
+.letter:hover {
+  font-size: 120px;
+  color: #fff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
 @layer utilities {
   .text-balance {
     text-wrap: balance;
