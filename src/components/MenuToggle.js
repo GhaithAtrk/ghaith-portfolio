@@ -1,9 +1,14 @@
 import { ThemeContext } from "@/context/ThemeContext";
+import { usePathname } from "next/navigation";
 import React, { useContext, useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 const MenuToggle = () => {
   const [openMenu, setOpenMenu] = useState(false);
+
+  const pathName = usePathname();
+
+  const isMain = pathName === "/";
 
   return (
     <div
@@ -16,10 +21,20 @@ const MenuToggle = () => {
         style={{ display: openMenu ? "block" : "none" }}
       >
         <div className="flex flex-col items-center text-[20px]">
-          <a href="/" className="py-2">Home</a>
-          <a href="/about" className="py-2">About Me</a>
-          <a href="/contact" className="py-2">Contact Me</a>
-          <a href="/#projects" className="py-2">Projects</a>
+          <a href="/" className="py-2">
+            Home
+          </a>
+          <a href="/about" className="py-2">
+            About Me
+          </a>
+          <a href="/contact" className="py-2">
+            Contact Me
+          </a>
+          {isMain && (
+            <a href="/#projects" className="py-2">
+              Projects
+            </a>
+          )}
         </div>
       </div>
     </div>
