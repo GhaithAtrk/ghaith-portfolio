@@ -1,7 +1,8 @@
 import { ThemeContext } from "@/context/ThemeContext";
 import { usePathname } from "next/navigation";
 import React, { useContext, useState } from "react";
-import { IoMdArrowDropdown } from "react-icons/io";
+import { MdArrowDropDown } from "react-icons/md";
+import { MdArrowDropUp } from "react-icons/md";
 import { IoCloseOutline } from "react-icons/io5";
 
 const MenuToggle = () => {
@@ -16,7 +17,11 @@ const MenuToggle = () => {
       className="block md:hidden border-[1px] border-black p-2 mx-1 rounded-full cursor-pointer"
       onClick={() => setOpenMenu(!openMenu)}
     >
-      <IoMdArrowDropdown />
+      {openMenu ? (
+        <MdArrowDropUp fontSize={20} />
+      ) : (
+        <MdArrowDropDown fontSize={20} />
+      )}
       <div
         className="absolute top-16 left-1/2 transform -translate-x-1/2  bg-black/75 border-2 border-black text-white p-2 w-[320px] mx-auto"
         style={{ display: openMenu ? "block" : "none" }}
