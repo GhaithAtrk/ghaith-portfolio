@@ -29,7 +29,7 @@ const About = () => {
             <br />
             <p>
               React (Next.js) is what i use to build my projects and i always
-              try to learn what's new in the field and keep myself up to date
+              try to learn what is new in the field and keep myself up to date
             </p>
           </div>
         </div>
