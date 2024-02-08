@@ -18,12 +18,19 @@ const About = () => {
           <div className="text-xl">
             <p>Developing webites is one of my interests in life.</p>
             <p>
-              As well i enjoy playing chess, soving riddles, indoor climbing and
+              I also enjoy playing chess, soving riddles, indoor climbing and
               watching movies
             </p>
             <br />
-            <p>React (Next.js) is what i use to build my projects.</p>
-            <p></p>
+            <p>
+              I have started in Jan 2020 and i have been gaining the experince ever
+              since then
+            </p>
+            <br />
+            <p>
+              React (Next.js) is what i use to build my projects and i always
+              try to learn what's new in the field and keep myself up to date
+            </p>
           </div>
         </div>
       </div>
