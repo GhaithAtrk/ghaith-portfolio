@@ -48,7 +48,7 @@ const RoleSection = () => {
       <div className="flex justify-around items-center h-screen mx-4">
         <div className="hidden md:block">
           <Image
-            src="/../mobile.png"
+            src="/../target.png"
             alt="/"
             width={300}
             height={600}
