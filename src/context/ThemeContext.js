@@ -6,11 +6,9 @@ export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const storedValue =
-    typeof window !== "undefined" ? localStorage.getItem("mode") : null;
+    typeof window !== "undefined" ? localStorage.getItem("mode") : "light";
 
-  const initial = storedValue !== null ? storedValue : "light";
-
-  const [mode, setMode] = useState(initial);
+  const [mode, setMode] = useState(storedValue);
 
   const toggle = () => {
     setMode((prev) => (prev == "dark" ? "light" : "dark"));
