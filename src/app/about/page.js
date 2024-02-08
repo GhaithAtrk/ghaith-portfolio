@@ -8,7 +8,7 @@ const About = () => {
 
   return (
     <div className="h-screen">
-      <div className="flex justify-center items-center h-full mx-4">
+      <div className="flex justify-center items-center h-full mx-4 pt-32 pb-10">
         <div
           className={` ${
             mode == "light" ? "bg-white/75" : "bg-black text-white"
