@@ -37,8 +37,8 @@ const RoleSection = () => {
         </div>
         <div className="hidden md:block">
           <Image
-            src="/../mobile.png"
-            alt="/"
+            src="/mobile.png"
+            alt=""
             width={300}
             height={600}
             layout="resposnive"
@@ -48,8 +48,8 @@ const RoleSection = () => {
       <div className="flex justify-around items-center h-screen mx-4">
         <div className="hidden md:block">
           <Image
-            src="/../target.png"
-            alt="/"
+            src="/target.png"
+            alt=""
             width={300}
             height={600}
             layout="resposnive"

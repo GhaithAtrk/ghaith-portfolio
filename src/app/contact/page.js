@@ -10,7 +10,7 @@ const Contact = () => {
   const { mode } = useContext(ThemeContext);
 
   return (
-    <div className="max-w-[1240px] h-screen mx-auto pt-32 px-4">
+    <div className="max-w-[1240px] mx-auto lg:h-screen pt-32 px-4">
       <div
         className={`${
           mode == "light" ? "text-black" : "text-white"

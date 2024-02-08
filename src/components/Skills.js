@@ -62,7 +62,7 @@ const Skills = () => {
               >
                 <div className="flex flex-col gap-4 justify-center items-center">
                   <div className="m-auto">
-                    <Image src={skill.logo} width={64} height={64} alt="/" />
+                    <Image src={skill.logo} width={64} height={64} alt="" />
                   </div>
                   <div className="m-auto">
                     <h3>{skill.label}</h3>
