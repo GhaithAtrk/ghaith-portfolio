@@ -23,7 +23,7 @@ const About = () => {
             </p>
             <br />
             <p>
-              I have started in Jan 2020 and i have been gaining the experince ever
+              I have started in Jan 2022 and i have been gaining the experince ever
               since then
             </p>
             <br />
