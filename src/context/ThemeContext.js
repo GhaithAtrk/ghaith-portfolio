@@ -5,14 +5,17 @@ import { createContext, useEffect, useMemo, useState } from "react";
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const storedValue =
-    typeof window !== "undefined" ? localStorage.getItem("mode") : "light";
-
-  const [mode, setMode] = useState(storedValue);
+  const [mode, setMode] = useState('light');
 
   const toggle = () => {
     setMode((prev) => (prev == "dark" ? "light" : "dark"));
   };
+
+  useEffect(() => {
+    const theme = localStorage.getItem("theme");
+
+    if (theme === "dark") setMode("dark");
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("mode", mode);
