@@ -4,6 +4,7 @@ import React, { useContext, useState } from "react";
 import { MdArrowDropDown } from "react-icons/md";
 import { MdArrowDropUp } from "react-icons/md";
 import { IoCloseOutline } from "react-icons/io5";
+import Link from "next/link";
 
 const MenuToggle = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -31,20 +32,20 @@ const MenuToggle = () => {
         </div>
         <div className="flex flex-col  h-full items-center text-[20px]">
           {!isMain && (
-            <a href="/" className="py-2">
+            <Link href="/" className="py-2">
               Home
-            </a>
+            </Link>
           )}
-          <a href="/about" className="py-2">
+          <Link href="/about" className="py-2">
             About Me
-          </a>
-          <a href="/contact" className="py-2">
+          </Link>
+          <Link href="/contact" className="py-2">
             Contact Me
-          </a>
+          </Link>
           {isMain && (
-            <a href="/#projects" className="py-2">
+            <Link href="#projects" className="py-2">
               Projects
-            </a>
+            </Link>
           )}
         </div>
       </div>
