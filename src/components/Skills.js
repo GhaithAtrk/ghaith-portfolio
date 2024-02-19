@@ -26,7 +26,11 @@ const Skills = () => {
     },
     {
       logo: "/skills/nextjs.png",
-      label: "Next",
+      label: "Next.js",
+    },
+    {
+      logo: "/skills/graphql.png",
+      label: "GraphQL",
     },
     {
       logo: "/skills/tailwind.png",
@@ -39,6 +43,10 @@ const Skills = () => {
     {
       logo: "/skills/material-ui.png",
       label: "Material UI",
+    },
+    {
+      logo: "/skills/aceternity.png",
+      label: "Aceternity UI",
     },
   ];
 
@@ -53,7 +61,7 @@ const Skills = () => {
         <h2 className="text-4xl font-bold text-center md:text-left">
           What Are My Skills?
         </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-4 mb-10">
+        <div className="grid grid-cols-2 lg:grid-cols-5 mb-10">
           {skillsLogos.map((skill) => {
             return (
               <div
