@@ -10,19 +10,22 @@ const Projects = () => {
 
   const ProjectsInfo = [
     {
-      siteName: "Tgarib",
-      siteImage: "/projects/tgarib.png",
-      siteLink: "https://tgarib.com",
+      siteName: "Bread Bakery",
+      siteImage: "/projects/bread-bakery.png",
+      siteLink: "#",
+      statement: "Coming Soon",
     },
     {
       siteName: "Almashoorah",
       siteImage: "/projects/almashoorah.png",
       siteLink: "https://almashoorah.com",
+      statement: "Visit Site",
     },
     {
       siteName: "Deeplogi",
       siteImage: "/projects/deeplogi.png",
       siteLink: "https://deeplogi.com",
+      statement: "Visit Site",
     },
   ];
 
@@ -47,13 +50,19 @@ const Projects = () => {
                 width={350}
                 height={190}
               />
-              <a target="_blank" href={project.siteLink}>
-                <div className="flex justify-center items-center absolute top-0 bottom-0 right-0 left-0 hover:bg-black/50 group">
+              <Link
+                target={project.siteName == "Bread Bakery" ? "" : "_blank"}
+                href={project.siteLink}
+              >
+                <div className="flex flex-col justify-center items-center absolute top-0 bottom-0 right-0 left-0 hover:bg-black/50 group">
+                  <p className="text-white text-xl font-bold hidden group-hover:block z-10">
+                    {project.siteName}
+                  </p>
                   <p className="text-white  font-bold hidden group-hover:block z-10">
-                    Visit Site
+                    {project.statement}
                   </p>
                 </div>
-              </a>
+              </Link>
             </div>
           );
         })}

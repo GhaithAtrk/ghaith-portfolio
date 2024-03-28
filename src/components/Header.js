@@ -5,12 +5,8 @@ import Link from "next/link";
 import React from "react";
 import ModeToggle from "./ModeToggle";
 import MenuToggle from "./MenuToggle";
-import { usePathname } from "next/navigation";
+
 const Header = () => {
-  const pathName = usePathname();
-
-  const isMain = pathName === "/";
-
   return (
     <div className="w-[93%] mt-4 left-0 right-0 fixed p-2 mx-auto flex justify-between items-center bg-white/75 rounded border-solid border-2 border-black z-10">
       <Link href="/">
@@ -27,6 +23,11 @@ const Header = () => {
             </Link>
           </li>
           <li>
+            <Link href="/#projects" className="hover:text-white">
+              Projects
+            </Link>
+          </li>
+          <li>
             <Link href="/about" className="hover:text-white">
               About Me
             </Link>
@@ -36,13 +37,6 @@ const Header = () => {
               Contact Me
             </Link>
           </li>
-          {isMain && (
-            <li>
-              <Link href="#projects" className="hover:text-white">
-                Projects
-              </Link>
-            </li>
-          )}
         </ul>
         <ModeToggle />
         <MenuToggle />

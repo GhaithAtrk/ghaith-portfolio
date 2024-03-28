@@ -1,6 +1,4 @@
-import { ThemeContext } from "@/context/ThemeContext";
-import { usePathname } from "next/navigation";
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { MdArrowDropDown } from "react-icons/md";
 import { MdArrowDropUp } from "react-icons/md";
 import { IoCloseOutline } from "react-icons/io5";
@@ -8,10 +6,6 @@ import Link from "next/link";
 
 const MenuToggle = () => {
   const [openMenu, setOpenMenu] = useState(false);
-
-  const pathName = usePathname();
-
-  const isMain = pathName === "/";
 
   return (
     <div
@@ -31,22 +25,18 @@ const MenuToggle = () => {
           <IoCloseOutline fontSize={20} />
         </div>
         <div className="flex flex-col  h-full items-center text-[20px]">
-          {!isMain && (
-            <Link href="/" className="py-2">
-              Home
-            </Link>
-          )}
+          <Link href="/" className="py-2">
+            Home
+          </Link>
+          <Link href="/#projects" className="py-2">
+            Projects
+          </Link>
           <Link href="/about" className="py-2">
             About Me
           </Link>
           <Link href="/contact" className="py-2">
             Contact Me
           </Link>
-          {isMain && (
-            <Link href="#projects" className="py-2">
-              Projects
-            </Link>
-          )}
         </div>
       </div>
     </div>

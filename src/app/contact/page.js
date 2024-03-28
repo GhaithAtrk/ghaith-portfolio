@@ -5,25 +5,24 @@ import { FaPhone } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
 import { ThemeContext } from "@/context/ThemeContext";
+import ContactUsForm from "@/forms/contact-us";
 
 const Contact = () => {
   const { mode } = useContext(ThemeContext);
 
   return (
-    <div className="max-w-[1240px] mx-auto lg:h-screen pt-32 px-4">
+    <div className="max-w-[1240px] mx-auto pt-32 px-4">
       <div
-        className={`${
-          mode == "light" ? "text-black" : "text-white"
-        } h-full`}
+        className={`${mode == "light" ? "text-black" : "text-white"} h-full`}
       >
         <h1 className="text-4xl font-bold py-4">
-          For now you can reach me through..
+          Reach me through..
         </h1>
-        <div className="py-20">
+        <div className="py-10">
           <div
             className={` ${
               mode == "light" ? "bg-white/75" : "bg-black"
-            } w-full  my-4 p-6 rounded-md border-black border-2 leading-loose`}
+            } w-full p-6 rounded-md border-black border-2 leading-loose`}
           >
             <ul className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-0">
               <li className="flex justify-start lg:justify-center items-center gap-2">
@@ -39,7 +38,7 @@ const Contact = () => {
                 <MdEmail />
                 <span className="contact-text gmail">
                   <Link href="mailto:#" title="Send me an email">
-                    ghaithatrk93@gmail.com
+                    ghaithphoenix@protonmail.com
                   </Link>
                 </span>
               </li>
@@ -51,9 +50,9 @@ const Contact = () => {
             </ul>
           </div>
         </div>
-        <p className="text-center py-4 text-gray-400">
-          (more to be added later)
-        </p>
+
+        <ContactUsForm mode={mode} />
+
         <div className="text-center">
           <Link href={"/"}>
             <button className="bg-[#C4873C] p-2 rounded my-4 border-black border-2 text-white">

@@ -1,3 +1,5 @@
+"use client";
+
 import Projects from "@/components/Projects";
 import RoleSection from "@/components/RoleSection";
 import Showcase from "@/components/Showcase";
