@@ -8,10 +8,11 @@ const ContactUsForm = ({ mode }) => {
 
       if (response) {
         console.log(response);
-        toast.success("Mail sent successfully!");
+        toast.success("Your message was sent successfully!");
       }
     } catch (error) {
       console.log(error);
+      toast.error("Something went wrong!");
     }
 
     document.getElementById("contact-form").reset();
@@ -33,18 +34,21 @@ const ContactUsForm = ({ mode }) => {
           name="name"
           className="my-2 p-2 border-black border-2 rounded-sm"
           placeholder="name"
+          required
         />
         <input
           type="email"
           name="email"
           className="my-2 p-2 border-black border-2 rounded-sm"
           placeholder="email"
+          required
         />
         <textarea
           type="text"
           name="message"
           className="my-2 p-2 border-black border-2 rounded-sm"
           placeholder="message"
+          required
         />
         <input
           type="submit"
