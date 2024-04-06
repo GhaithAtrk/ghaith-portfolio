@@ -68,7 +68,7 @@ const Skills = () => {
                 key={skill.label}
                 className="p-6 my-4 mx-2 bg-white/20 rounded-md hover:scale-105 ease-in duration-300"
               >
-                <div className="flex flex-col gap-4 justify-center items-center">
+                <div className="h-full flex flex-col justify-between gap-4 items-center">
                   <div className="m-auto">
                     <Image src={skill.logo} width={64} height={64} alt="" />
                   </div>
