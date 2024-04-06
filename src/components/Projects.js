@@ -12,8 +12,8 @@ const Projects = () => {
     {
       siteName: "Bread Bakery",
       siteImage: "/projects/bread-bakery.png",
-      siteLink: "#",
-      statement: "Coming Soon",
+      siteLink: "https://bread-bakery.vercel.app",
+      statement: "Visit Site",
     },
     {
       siteName: "Almashoorah",
