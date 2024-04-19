@@ -11,21 +11,21 @@ const Contact = () => {
   const { mode } = useContext(ThemeContext);
 
   return (
-    <div className="max-w-[1240px] mx-auto pt-32 px-4">
+    <div className="min-h-screen">
       <div
-        className={`${mode == "light" ? "text-black" : "text-white"} h-full`}
+        className={`${
+          mode == "light" ? "text-black" : "text-white"
+        } max-w-[1240px] mx-auto pt-32 px-4 h-full`}
       >
-        <h1 className="text-4xl font-bold py-4">
-          Reach me through..
-        </h1>
+        <h1 className="text-4xl font-bold py-4">Reach me through..</h1>
         <div className="py-10">
           <div
             className={` ${
               mode == "light" ? "bg-white/75" : "bg-black"
             } w-full p-6 rounded-md border-black border-2 leading-loose`}
           >
-            <ul className="flex flex-col lg:flex-row justify-between gap-8 lg:gap-0">
-              <li className="flex justify-start lg:justify-center items-center gap-2">
+            <ul className="flex flex-col md:flex-row justify-between gap-8 lg:gap-0">
+              <li className="flex justify-center items-center gap-2">
                 <FaPhone />
                 <span className="contact-text phone">
                   <Link href="tel:1-212-555-5555" title="Give me a call">
@@ -43,7 +43,7 @@ const Contact = () => {
                 </span>
               </li>
 
-              <li className="flex justify-end lg:justify-center items-center gap-2">
+              <li className="flex justify-center items-center gap-2">
                 <FaLocationDot />
                 <span className="contact-text place">Selangor, Malaysia</span>
               </li>
@@ -55,7 +55,11 @@ const Contact = () => {
 
         <div className="text-center">
           <Link href={"/"}>
-            <button className="bg-[#C4873C] p-2 rounded my-4 border-black border-2 text-white">
+            <button
+              className={`${
+                mode == "light" ? "bg-[#C4873C]" : "bg-gray-600"
+              } p-2 rounded my-4 border-black border-2 text-white`}
+            >
               Home Page
             </button>
           </Link>

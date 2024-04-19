@@ -48,6 +48,10 @@ const Skills = () => {
       logo: "/skills/aceternity.png",
       label: "Aceternity UI",
     },
+    {
+      logo: "/skills/prismic.png",
+      label: "Prismic",
+    },
   ];
 
   return (

@@ -52,7 +52,9 @@ const ContactUsForm = ({ mode }) => {
         />
         <input
           type="submit"
-          className="bg-[#C4873C] p-2 rounded my-4 border-black border-2 text-white cursor-pointer w-[50%]"
+          className={`${
+            mode == "light" ? "bg-[#C4873C]" : "bg-gray-600"
+          } p-2 rounded my-4 border-black border-2 text-white cursor-pointer w-[50%]`}
         />
       </form>
     </div>

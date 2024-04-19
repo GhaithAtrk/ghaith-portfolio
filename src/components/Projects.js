@@ -10,6 +10,12 @@ const Projects = () => {
 
   const ProjectsInfo = [
     {
+      siteName: "Gravity",
+      siteImage: "/projects/gravity.png",
+      siteLink: "https://gravity-space.vercel.app",
+      statement: "Visit Site",
+    },
+    {
       siteName: "Bread Bakery",
       siteImage: "/projects/bread-bakery.png",
       siteLink: "https://bread-bakery.vercel.app",
@@ -39,7 +45,7 @@ const Projects = () => {
       <h1 className="text-4xl font-bold text-center md:text-left">
         What Did I Work On?
       </h1>
-      <div className="flex flex-col items-center md:flex-row justify-around mt-4 mb-20">
+      <div className="flex flex-col md:flex-row flex-wrap justify-between mt-4 mb-20">
         {ProjectsInfo.map((project, index) => {
           return (
             <div key={`project-${index}`} className="relative m-4">
@@ -47,13 +53,10 @@ const Projects = () => {
                 className="project"
                 src={project.siteImage}
                 alt={project.siteName}
-                width={350}
-                height={190}
+                width={370}
+                height={290}
               />
-              <Link
-                target={project.siteName == "Bread Bakery" ? "" : "_blank"}
-                href={project.siteLink}
-              >
+              <Link target={"_blank"} href={project.siteLink}>
                 <div className="flex flex-col justify-center items-center absolute top-0 bottom-0 right-0 left-0 hover:bg-black/50 group">
                   <p className="text-white text-xl font-bold hidden group-hover:block z-10">
                     {project.siteName}
@@ -79,7 +82,11 @@ const Projects = () => {
         </h3>
 
         <Link href={"/contact"}>
-          <button className="bg-[#C4873C] p-2 rounded my-4 border-black border-2 text-white">
+          <button
+            className={`${
+              mode == "light" ? "bg-[#C4873C]" : "bg-gray-600"
+            } p-2 rounded my-4 border-black border-2 text-white`}
+          >
             Contact page
           </button>
         </Link>
