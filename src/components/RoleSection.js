@@ -12,11 +12,11 @@ const RoleSection = () => {
     <div>
       <div className="flex justify-around items-center h-screen mx-4">
         <div className={`${mode == "light" ? "text-black" : "text-white"} `}>
-          <h1 className="text-4xl font-bold">What Is My Role?</h1>
+          <h1 className="text-4xl my-4 font-bold">What Is My Role?</h1>
           <div
             className={` ${
               mode == "light" ? "bg-white/75" : "bg-black"
-            } md:w-[650px]  my-4 p-6 rounded-md border-black border-2 leading-loose `}
+            } md:w-[650px] my-4 p-6 rounded-md border-black border-2 leading-loose `}
           >
             <div className="text-[18px]">
               <p>
@@ -56,7 +56,7 @@ const RoleSection = () => {
           />
         </div>
         <div className={`${mode == "light" ? "text-black" : "text-white"}`}>
-          <h1 className="text-4xl font-bold">What Is My Goal?</h1>
+          <h1 className="text-4xl my-4 font-bold">What Is My Goal?</h1>
           <div
             className={` ${
               mode == "light" ? "bg-white/75" : "bg-black"
