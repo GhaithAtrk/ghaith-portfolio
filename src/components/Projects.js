@@ -3,7 +3,7 @@
 import { ThemeContext } from "@/context/ThemeContext";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 
 const Projects = () => {
   const { mode } = useContext(ThemeContext);
@@ -49,7 +49,7 @@ const Projects = () => {
       id="projects"
       className={`${
         mode == "light" ? "text-black" : "text-white"
-      }  max-w-[1240px] mx-auto scroll-smooth`}
+      } relative max-w-[1240px] mx-auto scroll-smooth`}
     >
       <h1 className="text-4xl font-bold text-center md:text-left">
         What Did I Work On?

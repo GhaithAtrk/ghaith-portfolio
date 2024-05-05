@@ -29,12 +29,12 @@ const Skills = () => {
       label: "Next.js",
     },
     {
-      logo: "/skills/tailwind.png",
-      label: "Tailwind",
-    },
-    {
       logo: "/skills/graphql.png",
       label: "GraphQL",
+    },
+    {
+      logo: "/skills/tailwind.png",
+      label: "Tailwind",
     },
     {
       logo: "/skills/bootstrap.png",
@@ -62,7 +62,7 @@ const Skills = () => {
     <div
       className={`${
         mode == "light" ? "text-black" : "text-white"
-      } w-full lg:h-screen p-2`}
+      } skills relative w-full lg:h-screen p-2 `}
       id="skills"
     >
       <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
@@ -74,7 +74,7 @@ const Skills = () => {
             return (
               <div
                 key={skill.label}
-                className="p-4 m-2 bg-white/20 rounded-md hover:scale-105 ease-in duration-300"
+                className="p-4 m-2 bg-white/80 rounded-md hover:scale-105 ease-in duration-300"
               >
                 <div className="h-full flex flex-col justify-between gap-4 items-center">
                   <div className="m-auto">

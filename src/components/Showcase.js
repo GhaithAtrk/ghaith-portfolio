@@ -5,8 +5,6 @@ import Spline from "@splinetool/react-spline";
 const Showcase = () => {
   const component = useRef(null);
 
-  const threeDShape = useRef(null);
-
   const renderLetters = (title, key) => {
     return title.split("").map((character, index) =>
       character === " " ? (
@@ -43,21 +41,10 @@ const Showcase = () => {
           duration: 0.5,
         }
       );
-
-      tl.fromTo(
-        ".object",
-        { opacity: 0 },
-        {
-          opacity: 1,
-          ease: "elastic.out(1,0.2)",
-          transformOrigin: "left top",
-          duration: 1,
-        }
-      );
     });
 
     return () => context.revert();
-  }, [component, threeDShape]);
+  }, [component]);
 
   return (
     <div className="showcase h-screen grid grid-rows-2 md:grid-cols-3 md:grid-rows-1">
@@ -70,10 +57,13 @@ const Showcase = () => {
           {renderLetters("Web Development", "second-line")}
         </div>
       </div>
-      <div className="object place-content-center col-span-1" ref={threeDShape}>
-        <Spline
-          scene="https://prod.spline.design/r-jlub9TfIL0Sl8y/scene.splinecode"
-        />
+      <div className="place-content-center col-span-1" ref={component}>
+        <div
+          id="object"
+          className="object fixed w-[420px] h-[400px] top-[280px] md:top-[230px] md:right-[230px]"
+        >
+          <Spline scene="https://draft.spline.design/j93qj-Io-gv7nCHa/scene.splinecode" />
+        </div>
       </div>
     </div>
   );
