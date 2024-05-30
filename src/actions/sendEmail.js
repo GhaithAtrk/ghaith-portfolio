@@ -13,7 +13,7 @@ export const sendEmail = async (formData) => {
 
   try {
     const response = await resend.emails.send({
-      from: "AvoCode <onboarding@resend.dev>",
+      from: "GreenPulsar <onboarding@resend.dev>",
       to: process.env.MY_EMAIL,
       subject: "Email From Portfolio",
       reply_to: email,

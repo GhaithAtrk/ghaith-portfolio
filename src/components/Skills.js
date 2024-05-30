@@ -1,93 +1,30 @@
 "use client";
 
 import { ThemeContext } from "@/context/ThemeContext";
-import Image from "next/image";
 import { useContext } from "react";
+
+import Spline from "@splinetool/react-spline";
 
 const Skills = () => {
   const { mode } = useContext(ThemeContext);
 
-  const skillsLogos = [
-    {
-      logo: "/skills/html.png",
-      label: "HTML",
-    },
-    {
-      logo: "/skills/css.png",
-      label: "CSS",
-    },
-    {
-      logo: "/skills/javascript.png",
-      label: "Javascript",
-    },
-    {
-      logo: "/skills/react.png",
-      label: "React",
-    },
-    {
-      logo: "/skills/nextjs.png",
-      label: "Next.js",
-    },
-    {
-      logo: "/skills/graphql.png",
-      label: "GraphQL",
-    },
-    {
-      logo: "/skills/tailwind.png",
-      label: "Tailwind",
-    },
-    {
-      logo: "/skills/bootstrap.png",
-      label: "Bootstrap",
-    },
-    {
-      logo: "/skills/material-ui.png",
-      label: "Material UI",
-    },
-    {
-      logo: "/skills/aceternity.png",
-      label: "Aceternity UI",
-    },
-    {
-      logo: "/skills/prismic.png",
-      label: "Prismic",
-    },
-    {
-      logo: "/skills/spline.png",
-      label: "Spline",
-    },
-  ];
-
   return (
-    <div
-      className={`${
-        mode == "light" ? "text-black" : "text-white"
-      } skills relative w-full lg:h-screen p-2 `}
-      id="skills"
-    >
-      <div className="max-w-[1240px] mx-auto flex flex-col justify-center h-full">
-        <h2 className="text-4xl my-4 font-bold text-center md:text-left">
-          What Are My Skills?
-        </h2>
-        <div className="grid grid-cols-2 lg:grid-cols-6 mb-10">
-          {skillsLogos.map((skill) => {
-            return (
-              <div
-                key={skill.label}
-                className="p-4 m-2 bg-white/80 rounded-md hover:scale-105 ease-in duration-300"
-              >
-                <div className="h-full flex flex-col justify-between gap-4 items-center">
-                  <div className="m-auto">
-                    <Image src={skill.logo} width={64} height={64} alt="" />
-                  </div>
-                  <div className="m-auto">
-                    <h3>{skill.label}</h3>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
+    <div className="max-w-[1240px] relative mx-auto flex flex-col justify-center h-full">
+      <h2 className="text-4xl my-4 font-bold text-center md:text-left">
+        What Are My Skills?
+      </h2>
+
+      <div
+        className={"skills relative mt-10 mb-20 hidden md:block"}
+        id="skills"
+      >
+        <Spline scene="https://prod.spline.design/U0hom80M4h4dXQhs/scene.splinecode" />
+      </div>
+      <div
+        className={"skills relative mt-10 mx-auto mb-20 block md:hidden"}
+        id="skills"
+      >
+        <Spline scene="https://prod.spline.design/jcienDiTiT59Uydg/scene.splinecode" />
       </div>
     </div>
   );

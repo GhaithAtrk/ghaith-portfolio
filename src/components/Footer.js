@@ -12,7 +12,7 @@ const Footer = () => {
         mode == "light" ? "bg-[#1f3b18]" : "bg-black"
       }  py-4 text-white text-center`}
     >
-      &copy; 2023 - 2024 Avocode, All Rights Reserved{" "}
+      &copy; 2023 - 2024 GreenPulsar, All Rights Reserved{" "}
     </div>
   );
 };

@@ -11,15 +11,14 @@ const Header = () => {
     "hover:text-white hover:drop-shadow-[0_1.4px_1.4px_rgba(0,0,0,1)]";
 
   return (
-    <div className="w-[93%] mt-4 left-0 right-0 fixed p-2 mx-auto flex justify-between items-center bg-white/75 rounded border-solid border-2 border-black z-20">
+    <div className="w-[93%] md:w-[75%] mt-4 left-0 right-0 fixed p-2 mx-auto flex justify-between items-center bg-white/95 rounded border-solid border-2 border-black z-20">
       <Link href="/">
-        <div className="logo flex px-4 gap-4 justify-between items-center">
-          <Image src="/avocado.png" alt="logo" width={40} height={40}></Image>
-          <h1 className="text-[22px] md:text-4xl font-bold ">AvoCode</h1>
+        <div className="logo flex px-4 gap-4 justify-between items-center w-[%50]">
+            <Image src="/green-pulsar.png" alt="logo" width={140} height={100} />
         </div>
       </Link>
       <nav className="flex justify-center items-center gap-2">
-        <ul className="hidden md:flex justify-between items-center gap-4 border-black border-r-2 p-2 ">
+        <ul className="hidden text-lg md:flex justify-between items-center gap-4 border-black border-r-2 p-2 ">
           <li>
             <Link href="/" className={hoverEffect}>
               Home

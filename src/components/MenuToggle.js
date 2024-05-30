@@ -18,7 +18,7 @@ const MenuToggle = () => {
         <MdArrowDropDown fontSize={20} />
       )}
       <div
-        className="absolute top-16 left-1/2 transform -translate-x-1/2  bg-black/75 border-2 border-black text-white p-2 w-[320px] mx-auto"
+        className="absolute top-[80px] left-1/2 transform -translate-x-1/2  bg-black/75 border-2 border-black text-white p-2 w-[320px] mx-auto"
         style={{ display: openMenu ? "block" : "none" }}
       >
         <div className="absolute right-3">
