@@ -25,7 +25,7 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/#projects" className={hoverEffect}>
+            <Link href="/projects" className={hoverEffect}>
               Projects
             </Link>
           </li>

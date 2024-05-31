@@ -1,14 +1,13 @@
 "use client";
 
-import Projects from "@/components/Projects";
 import RoleSection from "@/components/RoleSection";
 import Showcase from "@/components/Showcase";
 import Skills from "@/components/Skills";
-import Spline from "@splinetool/react-spline";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import GoalSection from "@/components/GoalSection";
+import Crossroad from "@/components/Crossroad";
 
 export default function Home() {
   const content = useRef(null);
@@ -56,19 +55,19 @@ export default function Home() {
             x: 0,
           });
 
-        gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: ".skills",
-              start: "top center",
-              end: "35% center",
-              scrub: true,
-            },
-          })
-          .to(".object", {
-            x: -300,
-            z: -1,
-          });
+        // gsap
+        //   .timeline({
+        //     scrollTrigger: {
+        //       trigger: ".skills",
+        //       start: "top center",
+        //       end: "35% center",
+        //       scrub: true,
+        //     },
+        //   })
+        //   .to(".object", {
+        //     x: -300,
+        //     z: -1,
+        //   });
 
         // Role Part
         gsap
@@ -108,7 +107,7 @@ export default function Home() {
       <RoleSection />
       <GoalSection />
       <Skills />
-      <Projects />
+      {/* <Crossroad /> */}
     </div>
   );
 }
