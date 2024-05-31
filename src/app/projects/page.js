@@ -52,8 +52,8 @@ const Projects = () => {
             Projects i have participated in..
           </h2>
           <div className="flex flex-col md:flex-row justify-around ">
-            {participated.map((data) => (
-              <Link target={"_blank"} href={data.siteLink}>
+            {participated.map((data , index) => (
+              <Link target={"_blank"} href={data.siteLink} key={index}>
                 <div className="border-8 max-w-[400px] rounded-md border-[#C4873C] bg-[#fdc158] p-2 mb-4 cursor-pointer flex flex-col items-center hover:scale-105 hover:translate-y-[-10px] transition duration-300 ease-in-out">
                   <div className="bg-white ">
                     <Image
@@ -78,10 +78,11 @@ const Projects = () => {
               Projects i did for practice in..
             </h2>
             <div className="flex flex-col md:flex-row justify-around ">
-              {practiced.map((data) => (
+              {practiced.map((data , index) => (
                 <Link
                   target={data.siteName == "Popsicle" ? "" : "_blank"}
                   href={data.siteLink}
+                  key={index}
                 >
                   <div className="border-8 max-w-[400px] rounded-md border-[#C4873C] bg-[#fdc158] p-2 mb-4 cursor-pointer flex flex-col items-center hover:scale-105 hover:translate-y-[-10px] transition duration-300 ease-in-out">
                     <div className="bg-white ">
