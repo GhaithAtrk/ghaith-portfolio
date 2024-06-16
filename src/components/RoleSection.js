@@ -7,7 +7,7 @@ const RoleSection = () => {
   const { mode } = useContext(ThemeContext);
 
   return (
-    <div className="roleSection h-screen relativ">
+    <div className="roleSection h-screen relative">
       <div className="flex justify-center items-center h-full z-10">
         <div className="container w-[340px] md:w-[650px] rolePart">
           <div className="front min-h-[520px] md:min-h-[320px]">

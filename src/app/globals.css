@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/*----------- Theme -----------*/
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -10,7 +12,7 @@
 
 .theme {
   position: relative;
-  background-image: linear-gradient(180deg,#bece7a, #90a955, #4f772d, #31572c);
+  background-image: linear-gradient(180deg, #bece7a, #90a955, #4f772d, #31572c);
   z-index: 1;
 }
 
@@ -31,14 +33,9 @@
   opacity: 1;
 }
 
-.letter {
-  user-select: none !important;
-  transition: 0.3s;
-}
-
-.letter:hover {
-  font-size: 120px;
-  color: #fff;
+h1 {
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 @layer base {
@@ -52,7 +49,7 @@
   }
 }
 
-/* ...................................... */
+/*----------- Card Animation -----------*/
 
 .container {
   perspective: 1000px;
@@ -79,7 +76,6 @@
   background: rgb(255 255 255 / 0.75);
   border: 2px solid #000;
   border-radius: 10px;
-  /* line-height: 2.8; */
 }
 
 .front:after {
@@ -162,4 +158,56 @@
   color: rgba(255, 255, 255, 0.7);
   font-family: "Montserrat";
   font-weight: 300;
+}
+
+/*----------- Glowing Buttons -----------*/
+
+.glowing_btn {
+  border: none;
+  font-size: 17px;
+  color: #fff;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.5s;
+  transition-property: box-shadow;
+}
+
+.green:hover {
+  box-shadow: 0 0 5px rgb(190, 254, 195), 0 0 25px rgb(190, 254, 195),
+    0 0 50px rgb(190, 254, 195), 0 0 100px rgb(190, 254, 195);
+}
+
+.orange:hover {
+  box-shadow: 0 0 5px rgb(251, 208, 46), 0 0 25px rgb(251, 208, 46),
+    0 0 50px rgb(251, 208, 46), 0 0 100px rgb(251, 208, 46);
+}
+
+/*----------- Projects Animation -----------*/
+
+.project {
+  transition: width 0.5s ease;
+}
+
+.info-layer {
+  transition-delay: 250ms;
+  transition: width 0.5s ease;
+}
+
+.project:hover {
+  animation: animate 0.5s forwards;
+  width: 85%;
+}
+
+.project:hover .info-layer {
+  transition-delay: 0.5s;
+  animation: animate 0.5s forwards;
+  width: 95%;
+}
+
+/*----------- Contact Me Animation -----------*/
+
+.contact-item:hover {
+  
 }

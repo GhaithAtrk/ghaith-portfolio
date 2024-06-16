@@ -28,7 +28,7 @@ const MenuToggle = () => {
           <Link href="/" className="py-2">
             Home
           </Link>
-          <Link href="/#projects" className="py-2">
+          <Link href="/projects" className="py-2">
             Projects
           </Link>
           <Link href="/about" className="py-2">

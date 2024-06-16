@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import React, { useContext } from "react";
 import { FaPhone } from "react-icons/fa6";
@@ -11,58 +12,69 @@ const Contact = () => {
   const { mode } = useContext(ThemeContext);
 
   return (
-    <div className="min-h-screen">
+    <div className="relative min-h-screen">
       <div
         className={`${
           mode == "light" ? "text-black" : "text-white"
-        } max-w-[1240px] mx-auto pt-32 px-4 h-full`}
+        } mx-auto h-full max-w-[1240px] px-4 pt-32`}
       >
-        <h1 className="text-4xl font-bold py-4">Reach me through..</h1>
-        <div className="py-10">
-          <div
-            className={` ${
-              mode == "light" ? "bg-white/75" : "bg-black"
-            } w-full p-6 rounded-md border-black border-2 leading-loose`}
-          >
-            <ul className="flex flex-col md:flex-row justify-between gap-8 lg:gap-0">
-              <li className="flex justify-center items-center gap-2">
-                <FaPhone />
-                <span className="contact-text phone">
-                  <Link href="tel:1-212-555-5555" title="Give me a call">
-                    +6017-6323-261
-                  </Link>
-                </span>
-              </li>
+        <h1 className="py-4 text-4xl">Reach me through..</h1>
 
-              <li className="flex justify-center items-center gap-2">
-                <MdEmail />
-                <span className="contact-text gmail">
-                  <Link href="mailto:#" title="Send me an email">
-                    ghaithphoenix@protonmail.com
-                  </Link>
-                </span>
-              </li>
+        <div className="flex flex-col items-center justify-around gap-8 md:flex-row">
+          <ContactUsForm mode={mode} />
 
-              <li className="flex justify-center items-center gap-2">
-                <FaLocationDot />
-                <span className="contact-text place">Selangor, Malaysia</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <ContactUsForm mode={mode} />
-
-        <div className="text-center">
-          <Link href={"/"}>
-            <button
-              className={`${
-                mode == "light" ? "bg-[#C4873C]" : "bg-gray-600"
-              } p-2 rounded my-4 border-black border-2 text-white`}
+          <div className="my-4 w-full md:w-[350px]">
+            <div
+              className={`h-[250px] rounded-md border-2 border-black bg-white/75 p-6 leading-loose`}
             >
-              Home Page
-            </button>
-          </Link>
+              <ul className="flex h-full flex-col items-start justify-evenly">
+                <li className="contact-item flex items-center justify-center gap-2">
+                  <Link href="tel:1-212-555-5555" title="Give me a call">
+                    <div
+                      className={`${
+                        mode == "light" ? "bg-[#C4873C]" : "bg-gray-600"
+                      } my-4 cursor-pointer rounded border-2 border-black p-2 text-white`}
+                    >
+                      <FaPhone />
+                    </div>
+                  </Link>
+                  <span className="contact-text phone">
+                    <Link href="tel:1-212-555-5555" title="Give me a call">
+                      +6017-6323-261
+                    </Link>
+                  </span>
+                </li>
+
+                <li className="flex items-center justify-center gap-2">
+                  <Link href="mailto:#" title="Send me an email">
+                    <div
+                      className={`${
+                        mode == "light" ? "bg-[#C4873C]" : "bg-gray-600"
+                      } my-4 cursor-pointer rounded border-2 border-black p-2 text-white`}
+                    >
+                      <MdEmail />
+                    </div>
+                  </Link>
+                  <span className="contact-text gmail">
+                    <Link href="mailto:#" title="Send me an email">
+                      ghaithphoenix@protonmail.com
+                    </Link>
+                  </span>
+                </li>
+
+                <li className="flex items-center justify-center gap-2">
+                  <div
+                    className={`${
+                      mode == "light" ? "bg-[#C4873C]" : "bg-gray-600"
+                    } my-4 cursor-pointer rounded border-2 border-black p-2 text-white`}
+                  >
+                    <FaLocationDot />
+                  </div>
+                  <span className="contact-text place">Selangor, Malaysia</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>

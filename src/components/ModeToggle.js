@@ -1,7 +1,6 @@
 import { ThemeContext } from "@/context/ThemeContext";
 import React, { useContext } from "react";
 import { FaRegLightbulb } from "react-icons/fa";
-import Spline from "@splinetool/react-spline";
 
 const ModeToggle = () => {
   const { toggle, mode } = useContext(ThemeContext);
@@ -12,7 +11,6 @@ const ModeToggle = () => {
       onClick={toggle}
     >
       <FaRegLightbulb className={`${mode == "dark" ? `text-white` : null}`} />
-      {/* <Spline scene="https://prod.spline.design/yHemStK8sP9E8gFV/scene.splinecode" /> */}
     </div>
   );
 };

@@ -2,12 +2,12 @@ import { sendEmail } from "@/actions/sendEmail";
 import toast from "react-hot-toast";
 
 const ContactUsForm = ({ mode }) => {
+  
   const handleSendEmail = async (formData) => {
     try {
       const response = await sendEmail(formData);
 
       if (response) {
-        console.log(response);
         toast.success("Your message was sent successfully!");
       }
     } catch (error) {
@@ -22,7 +22,7 @@ const ContactUsForm = ({ mode }) => {
     <div
       className={` ${
         mode == "light" ? "bg-white/75" : "bg-black"
-      } w-full  my-4 p-6 rounded-md border-black border-2 leading-loose`}
+      } w-full md:w-[650px]  my-4 p-6 rounded-md border-black border-2 leading-loose`}
     >
       <form
         id="contact-form"
@@ -48,13 +48,14 @@ const ContactUsForm = ({ mode }) => {
           name="message"
           className="my-2 p-2 border-black border-2 rounded-sm"
           placeholder="message"
+          rows="4"
           required
         />
         <input
           type="submit"
           className={`${
             mode == "light" ? "bg-[#C4873C]" : "bg-gray-600"
-          } p-2 rounded my-4 border-black border-2 text-white cursor-pointer w-[50%]`}
+          } p-2 rounded my-4 border-black border-2 text-white cursor-pointer`}
         />
       </form>
     </div>

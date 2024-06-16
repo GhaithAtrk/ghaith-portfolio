@@ -13,8 +13,8 @@ const Header = () => {
   return (
     <div className="w-[93%] md:w-[75%] mt-4 left-0 right-0 fixed p-2 mx-auto flex justify-between items-center bg-white/95 rounded border-solid border-2 border-black z-20">
       <Link href="/">
-        <div className="logo flex px-4 gap-4 justify-between items-center w-[%50]">
-            <Image src="/green-pulsar.png" alt="logo" width={140} height={100} />
+        <div className="logo flex px-4 gap-4 justify-between items-center">
+            <Image src="/green-pulsar.png" alt="logo" width={100} height={60} className="w-auto" />
         </div>
       </Link>
       <nav className="flex justify-center items-center gap-2">

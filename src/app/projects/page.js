@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,14 +10,24 @@ const Projects = () => {
       siteImage: "/projects/deeplogi.png",
       siteLink: "https://deeplogi.com",
       description:
-        "one two three four five six seven eight nine ten eleven twelve",
+        "a project focus on connecting shipping companies and clients and allow them to manage shipping orders for their companies, stores, merchants & Ecommerce shops.",
+      skills: [
+        "/skills/nextjs.png",
+        "/skills/graphql.png",
+        "/skills/material-ui.png",
+      ],
     },
     {
       siteName: "Almashoorah",
       siteImage: "/projects/almashoorah.png",
       siteLink: "https://almashoorah.com",
       description:
-        "one two three four five six seven eight nine ten eleven twelve",
+        "a psychological, family, educational and social counseling center, providing their services for directed to husbands, wives, parents, and children in the stages of childhood, adolescence, youth, and maturity",
+      skills: [
+        "/skills/nextjs.png",
+        "/skills/graphql.png",
+        "/skills/material-ui.png",
+      ],
     },
   ];
 
@@ -33,74 +44,102 @@ const Projects = () => {
       siteImage: "/projects/gravity.png",
       siteLink: "https://gravity-space.vercel.app",
       description:
-        "one two three four five six seven eight nine ten eleven twelve",
+        "A project i have practiced CMS with to get the concept of how things work with this 'CMS' tech",
+      skills: ["/skills/nextjs.png", "/skills/prismic.png"],
     },
     {
       siteName: "Bread Bakery",
       siteImage: "/projects/bread-bakery.png",
       siteLink: "https://bread-bakery.vercel.app",
       description:
-        "one two three four five six seven eight nine ten eleven twelve",
+        "A project i have practiced using Aceternity with to get to see how components can be implemmented on an actual project",
+      skills: ["/skills/nextjs.png", "/skills/aceternity.png"],
     },
   ];
 
   return (
     <div className="min-h-screen pt-32">
-      <div className="max-w-[1240px] relative mx-auto ">
+      <div className="relative mx-auto max-w-[1240px]">
         <div className="mb-20">
-          <h2 className="text-xl mx-4 md:text-4xl mt-4 mb-10">
+          <h2 className="mx-4 mb-10 mt-4 text-xl md:text-4xl">
             Projects i have participated in..
           </h2>
-          <div className="flex flex-col md:flex-row justify-around ">
-            {participated.map((data , index) => (
-              <Link target={"_blank"} href={data.siteLink} key={index}>
-                <div className="border-8 max-w-[400px] rounded-md border-[#C4873C] bg-[#fdc158] p-2 mb-4 cursor-pointer flex flex-col items-center hover:scale-105 hover:translate-y-[-10px] transition duration-300 ease-in-out">
-                  <div className="bg-white ">
+          <div className="projects-container">
+            {participated.map((data, index) => (
+              <div className="">
+                <Link target={"_blank"} href={data.siteLink} key={index}>
+                  <div className="project relative my-40 min-w-[250px] cursor-pointer overflow-hidden rounded-full border-8 border-[#C4873C] bg-[#fdc158] md:w-[600px]">
                     <Image
                       src={data.siteImage}
                       width={600}
                       height={250}
                       alt=""
+                      className="relative left-0 top-0 z-10 rounded-full"
                     />
+                    <div className="info-layer z-1 absolute left-0 top-0 flex h-full w-full items-center justify-end rounded-full bg-white/85 p-2 text-end font-bold md:w-[600px]">
+                      <div className="max-w-[350px] px-2 text-center">
+                        <div className="my-2 text-xl">{data.siteName}</div>
+                        <div className="text-md my-2 text-balance">
+                          {data.description}
+                        </div>
+                        <div className="my-2 flex items-center justify-center gap-2">
+                          skills:
+                          {data.skills?.map((skill, index) => (
+                            <Image
+                              key={index}
+                              src={skill}
+                              alt=""
+                              width={25}
+                              height={20}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="text-xl font-bold my-2 bg-white rounded-sm w-full p-2">
-                    {data.siteName}
-                  </div>
-                  {/* <div className="text-xl bg-white rounded-sm w-full p-2">
-                    {data.description}
-                  </div> */}
-                </div>
-              </Link>
+                </Link>
+              </div>
             ))}
           </div>
           <div className="my-20">
-            <h2 className="text-xl mx-4 md:text-4xl mt-4 mb-10">
+            <h2 className="mx-4 mb-10 mt-4 text-xl md:text-4xl">
               Projects i did for practice in..
             </h2>
-            <div className="flex flex-col md:flex-row justify-around ">
-              {practiced.map((data , index) => (
-                <Link
-                  target={data.siteName == "Popsicle" ? "" : "_blank"}
-                  href={data.siteLink}
-                  key={index}
-                >
-                  <div className="border-8 max-w-[400px] rounded-md border-[#C4873C] bg-[#fdc158] p-2 mb-4 cursor-pointer flex flex-col items-center hover:scale-105 hover:translate-y-[-10px] transition duration-300 ease-in-out">
-                    <div className="bg-white ">
+            <div className="projects-container">
+              {practiced.map((data, index) => (
+                <div className="">
+                  <Link target={"_blank"} href={data.siteLink} key={index}>
+                    <div className="project relative my-40 min-w-[250px] cursor-pointer overflow-hidden rounded-full border-8 border-[#C4873C] bg-[#fdc158] md:w-[600px]">
                       <Image
                         src={data.siteImage}
                         width={600}
                         height={250}
                         alt=""
+                        className="relative left-0 top-0 z-10 rounded-full"
                       />
+                      <div className="info-layer z-1 absolute left-0 top-0 flex h-full w-full items-center justify-end rounded-full bg-white/85 p-2 text-end font-bold md:w-[600px]">
+                        <div className="max-w-[350px] px-2 text-center">
+                          <div className="my-2 text-xl">{data.siteName}</div>
+                          <div className="text-md my-2 text-balance">
+                            {data.description}
+                          </div>
+                          <div className="my-2 flex items-center justify-center gap-2">
+                            skills:
+                            {data.skills?.map((skill, index) => (
+                              <Image
+                                key={index}
+                                src={skill}
+                                alt=""
+                                width={25}
+                                height={20}
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div className="text-xl font-bold my-2 bg-white rounded-sm w-full p-2">
-                      {data.siteName}
-                    </div>
-                    {/* <div className="text-xl bg-white rounded-sm w-full p-2">
-                      {data.description}
-                    </div> */}
-                  </div>
-                </Link>
+                  </Link>
+                </div>
               ))}
             </div>
           </div>

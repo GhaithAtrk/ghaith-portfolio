@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import GoalSection from "@/components/GoalSection";
 import Crossroad from "@/components/Crossroad";
+import Learning from "@/components/Learning";
 
 export default function Home() {
   const content = useRef(null);
@@ -17,18 +18,8 @@ export default function Home() {
   useEffect(() => {
     const context = gsap.context(() => {
       gsap.matchMedia().add("(min-width: 800px)", () => {
-        gsap.timeline().fromTo(
-          ".object",
-          { opacity: 0 },
-          {
-            opacity: 1,
-            ease: "elastic.out(1,0.2)",
-            transformOrigin: "left top",
-            duration: 1,
-          }
-        );
-
-        // Blooming Object
+        
+        // Pulsar Object
         gsap
           .timeline({
             scrollTrigger: {
@@ -55,19 +46,18 @@ export default function Home() {
             x: 0,
           });
 
-        // gsap
-        //   .timeline({
-        //     scrollTrigger: {
-        //       trigger: ".skills",
-        //       start: "top center",
-        //       end: "35% center",
-        //       scrub: true,
-        //     },
-        //   })
-        //   .to(".object", {
-        //     x: -300,
-        //     z: -1,
-        //   });
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".skills",
+              start: "top center",
+              end: "50% center",
+              scrub: true,
+            },
+          })
+          .to(".object", {
+            x: -300,
+          });
 
         // Role Part
         gsap
@@ -102,12 +92,16 @@ export default function Home() {
   }, [content]);
 
   return (
-    <div className="relative" ref={content}>
+    <div
+      className="relative"
+       ref={content}
+    >
       <Showcase />
       <RoleSection />
       <GoalSection />
       <Skills />
-      {/* <Crossroad /> */}
+      <Learning />
+      <Crossroad />
     </div>
   );
 }
