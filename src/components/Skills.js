@@ -4,8 +4,8 @@ import Spline from "@splinetool/react-spline";
 const Skills = () => {
 
   return (
-    <div className="skills relative mx-auto flex max-w-[1240px] flex-col justify-center md:h-screen">
-      <h2 className="my-4 text-center text-4xl font-bold md:text-left">
+    <div className="skills relative mx-auto flex max-w-[1240px] flex-col justify-center h-[460px] md:h-screen">
+      <h2 className="my-4 mb-8 text-center text-4xl font-bold md:text-left">
         What Are My Skills?
       </h2>
 
