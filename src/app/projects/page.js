@@ -66,7 +66,7 @@ const Projects = () => {
           </h2>
           <div className="projects-container">
             {participated.map((data, index) => (
-              <div className="">
+              <div key={index}>
                 <Link target={"_blank"} href={data.siteLink} key={index}>
                   <div className="project relative my-40 min-w-[250px] cursor-pointer overflow-hidden rounded-full border-8 border-[#C4873C] bg-[#fdc158] md:w-[600px]">
                     <Image
@@ -107,8 +107,8 @@ const Projects = () => {
             </h2>
             <div className="projects-container">
               {practiced.map((data, index) => (
-                <div className="">
-                  <Link target={"_blank"} href={data.siteLink} key={index}>
+                <div key={index}>
+                  <Link target={"_blank"} href={data.siteLink} >
                     <div className="project relative my-40 min-w-[250px] cursor-pointer overflow-hidden rounded-full border-8 border-[#C4873C] bg-[#fdc158] md:w-[600px]">
                       <Image
                         src={data.siteImage}
