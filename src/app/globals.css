@@ -33,10 +33,6 @@
   opacity: 1;
 }
 
-h1 {
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
-    1px 1px 0 #000;
-}
 
 @layer base {
   html {
@@ -175,39 +171,44 @@ h1 {
 }
 
 .green:hover {
-  box-shadow: 0 0 5px rgb(190, 254, 195), 0 0 25px rgb(190, 254, 195),
-    0 0 50px rgb(190, 254, 195), 0 0 100px rgb(190, 254, 195);
+  box-shadow:
+    0 0 5px rgb(190, 254, 195),
+    0 0 25px rgb(190, 254, 195),
+    0 0 50px rgb(190, 254, 195),
+    0 0 100px rgb(190, 254, 195);
 }
 
 .orange:hover {
-  box-shadow: 0 0 5px rgb(251, 208, 46), 0 0 25px rgb(251, 208, 46),
-    0 0 50px rgb(251, 208, 46), 0 0 100px rgb(251, 208, 46);
+  box-shadow:
+    0 0 5px rgb(251, 208, 46),
+    0 0 25px rgb(251, 208, 46),
+    0 0 50px rgb(251, 208, 46),
+    0 0 100px rgb(251, 208, 46);
 }
 
 /*----------- Projects Animation -----------*/
+
+.project-row {
+  transition: width 0.3s ease;
+}
 
 .project {
   transition: width 0.5s ease;
 }
 
 .info-layer {
-  transition-delay: 250ms;
-  transition: width 0.5s ease;
+  transition: width 0.8s ease;
+}
+
+.project-row:hover {
+  width: 100%;
 }
 
 .project:hover {
-  animation: animate 0.5s forwards;
   width: 85%;
 }
 
 .project:hover .info-layer {
   transition-delay: 0.5s;
-  animation: animate 0.5s forwards;
   width: 95%;
-}
-
-/*----------- Contact Me Animation -----------*/
-
-.contact-item:hover {
-  
 }

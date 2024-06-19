@@ -11,7 +11,7 @@
   "dependencies": {
     "@react-email/components": "^0.0.15",
     "@splinetool/react-spline": "^3.1.0",
-    "@splinetool/runtime": "^1.6.8",
+    "@splinetool/runtime": "^1.6.9",
     "gsap": "^3.12.5",
     "next": "^14.2.4",
     "react": "^18",

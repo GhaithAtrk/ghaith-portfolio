@@ -64,51 +64,15 @@ const Projects = () => {
           <h2 className="mx-4 mb-10 mt-4 text-xl md:text-4xl">
             Projects i have participated in..
           </h2>
-          <div className="projects-container">
+          <div>
             {participated.map((data, index) => (
-              <div key={index}>
-                <Link target={"_blank"} href={data.siteLink} key={index}>
-                  <div className="project relative my-40 min-w-[250px] cursor-pointer overflow-hidden rounded-full border-8 border-[#C4873C] bg-[#fdc158] md:w-[600px]">
-                    <Image
-                      src={data.siteImage}
-                      width={600}
-                      height={250}
-                      alt=""
-                      className="relative left-0 top-0 z-10 rounded-full"
-                    />
-                    <div className="info-layer z-1 absolute left-0 top-0 flex h-full w-full items-center justify-end rounded-full bg-white/85 p-2 text-end font-bold md:w-[600px]">
-                      <div className="max-w-[350px] px-2 text-center">
-                        <div className="my-2 text-xl">{data.siteName}</div>
-                        <div className="text-md my-2 text-balance">
-                          {data.description}
-                        </div>
-                        <div className="my-2 flex items-center justify-center gap-2">
-                          skills:
-                          {data.skills?.map((skill, index) => (
-                            <Image
-                              key={index}
-                              src={skill}
-                              alt=""
-                              width={25}
-                              height={20}
-                            />
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            ))}
-          </div>
-          <div className="my-20">
-            <h2 className="mx-4 mb-10 mt-4 text-xl md:text-4xl">
-              Projects i did for practice in..
-            </h2>
-            <div className="projects-container">
-              {practiced.map((data, index) => (
-                <div key={index}>
-                  <Link target={"_blank"} href={data.siteLink} >
+              <div className="project-container" key={index}>
+                <div className="project-row rounded-ful md:w-[600px]">
+                  <Link
+                    target={"_blank"}
+                    href={data.siteLink}
+                    className="w-fit"
+                  >
                     <div className="project relative my-40 min-w-[250px] cursor-pointer overflow-hidden rounded-full border-8 border-[#C4873C] bg-[#fdc158] md:w-[600px]">
                       <Image
                         src={data.siteImage}
@@ -139,6 +103,54 @@ const Projects = () => {
                       </div>
                     </div>
                   </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="my-20">
+            <h2 className="mx-4 mb-10 mt-4 text-xl md:text-4xl">
+              Projects i did for practice in..
+            </h2>
+            <div>
+              {practiced.map((data, index) => (
+                <div className="project-container" key={index}>
+                  <div className="project-row rounded-ful md:w-[600px]">
+                    <Link
+                      target={"_blank"}
+                      href={data.siteLink}
+                      className="w-fit"
+                    >
+                      <div className="project relative my-40 min-w-[250px] cursor-pointer overflow-hidden rounded-full border-8 border-[#C4873C] bg-[#fdc158] md:w-[600px]">
+                        <Image
+                          src={data.siteImage}
+                          width={600}
+                          height={250}
+                          alt=""
+                          className="relative left-0 top-0 z-10 rounded-full"
+                        />
+                        <div className="info-layer z-1 absolute left-0 top-0 flex h-full w-full items-center justify-end rounded-full bg-white/85 p-2 text-end font-bold md:w-[600px]">
+                          <div className="max-w-[350px] px-2 text-center">
+                            <div className="my-2 text-xl">{data.siteName}</div>
+                            <div className="text-md my-2 text-balance">
+                              {data.description}
+                            </div>
+                            <div className="my-2 flex items-center justify-center gap-2">
+                              skills:
+                              {data.skills?.map((skill, index) => (
+                                <Image
+                                  key={index}
+                                  src={skill}
+                                  alt=""
+                                  width={25}
+                                  height={20}
+                                />
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
                 </div>
               ))}
             </div>
