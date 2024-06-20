@@ -1,13 +1,6 @@
-"use client";
-
-import { ThemeContext } from "@/context/ThemeContext";
-import { useContext } from "react";
-
-import Spline from "@splinetool/react-spline";
+import Spline from "@splinetool/react-spline/next";
 
 const Learning = () => {
-  const { mode } = useContext(ThemeContext);
-
   return (
     <div className="learning relative mx-auto flex h-screen max-w-[1240px] flex-col justify-center">
       <h2 className="my-4 mb-8 text-center text-4xl font-bold md:text-left">
@@ -24,8 +17,8 @@ const Learning = () => {
           </p>
         </div>
 
-        <div className="h-[400px] md:h-[500px] md:w-[500px]">
-          <Spline scene="https://prod.spline.design/RtNKUIjyI4f0ujvn/scene.splinecode" />
+        <div className="h-[400px] w-[90%] md:h-[500px] md:w-[500px]">
+        <Spline scene="https://prod.spline.design/RtNKUIjyI4f0ujvn/scene.splinecode" />
         </div>
       </div>
     </div>

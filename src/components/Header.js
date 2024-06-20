@@ -7,17 +7,24 @@ import ModeToggle from "./ModeToggle";
 import MenuToggle from "./MenuToggle";
 
 const Header = () => {
-  const navItem = ''
+  const navItem = "nav-item";
 
   return (
-    <div className="w-[93%] md:w-[75%] mt-4 left-0 right-0 fixed p-2 mx-auto flex justify-between items-center bg-white/95 rounded border-solid border-2 border-black z-20">
+    <div className="fixed left-0 right-0 z-20 mx-auto mt-4 flex w-[93%] items-center justify-between rounded border-2 border-solid border-black bg-white/95 p-2 md:w-[75%]">
       <Link href="/">
-        <div className="logo flex px-4 gap-4 justify-between items-center">
-            <Image src="/green-pulsar.png" alt="logo" width={100} height={60} className="w-auto" />
+        <div className="logo flex items-center justify-between gap-4 px-4">
+          <Image
+            src="/green-pulsar.png"
+            alt="logo"
+            width={100}
+            height={60}
+            priority
+            className="w-auto"
+          />
         </div>
       </Link>
-      <nav className="flex justify-center items-center gap-2">
-        <ul className="hidden text-lg md:flex justify-between items-center gap-4 border-black border-r-2 p-2 ">
+      <nav className="flex items-center justify-center gap-2">
+        <ul className="hidden items-center justify-between gap-4 border-r-2 border-black p-2 text-lg md:flex">
           <li>
             <Link href="/" className={navItem}>
               Home

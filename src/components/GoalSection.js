@@ -1,16 +1,8 @@
-"use client";
-
-import { ThemeContext } from "@/context/ThemeContext";
-import Image from "next/image";
-import React, { useContext } from "react";
-
 const GoalSection = () => {
-  const { mode } = useContext(ThemeContext);
-
   return (
     <div className="goalSection h-screen relative">
-      <div className="flex justify-center items-center h-full z-10">
-        <div className=" goalPart container w-[340px] md:w-[650px]">
+      <div className="flex justify-center items-center h-full">
+        <div className="goalPart container w-[340px] md:w-[650px]">
           <div className="front min-h-[520px] md:min-h-[320px]">
             <div className="inner">
               <h1 className="text-2xl md:text-4xl font-bold">

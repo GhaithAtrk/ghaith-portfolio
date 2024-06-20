@@ -1,15 +1,8 @@
-"use client";
-
-import { ThemeContext } from "@/context/ThemeContext";
-import React, { useContext } from "react";
-
 const RoleSection = () => {
-  const { mode } = useContext(ThemeContext);
-
   return (
     <div className="roleSection h-screen relative">
-      <div className="flex justify-center items-center h-full z-10">
-        <div className="container w-[340px] md:w-[650px] rolePart">
+      <div className="flex justify-center items-center h-full">
+        <div className="rolePart container w-[340px] md:w-[650px]">
           <div className="front min-h-[520px] md:min-h-[320px]">
             <div className="inner">
               <h1 className="text-2xl md:text-4xl font-bold">

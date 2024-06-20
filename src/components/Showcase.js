@@ -1,6 +1,4 @@
-"use client";
-
-import Spline from "@splinetool/react-spline";
+import Spline from "@splinetool/react-spline/next";
 import Image from "next/image";
 
 const Showcase = () => {
@@ -17,7 +15,7 @@ const Showcase = () => {
       </div>
       <div className="absolute left-[550px] top-[100px]">
         <div className="object fixed">
-          <Spline scene="https://prod.spline.design/tHDN9PtoUWYagGJZ/scene.splinecode" />
+        <Spline scene="https://prod.spline.design/r-jlub9TfIL0Sl8y/scene.splinecode" />
         </div>
       </div>
     </div>

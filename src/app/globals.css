@@ -45,6 +45,15 @@
   }
 }
 
+/*----------- Nav Item Effect -----------*/
+
+
+.nav-item:hover {
+  text-shadow: 0 0 5px #83f353, 0 0 15px #83f353, 0 0 20px #83f353,
+    0 0 40px #83f353, 0 0 60px #83f353, 0 0 10px #ff8d00, 0 0 98px #ff8d00;
+}
+
+
 /*----------- Card Animation -----------*/
 
 .container {
@@ -110,7 +119,6 @@
   box-sizing: border-box;
   outline: 1px solid transparent;
   perspective: inherit;
-  z-index: 2;
 }
 
 .container .back {
