@@ -4,7 +4,7 @@ import Image from "next/image";
 const Showcase = () => {
   return (
     <div className="showcase relative h-screen">
-      <div className="left-18 absolute top-[200px] -translate-y-[50%] transform md:left-40 md:top-1/2">
+      <div className="absolute top-[200px] -translate-y-[50%] transform md:top-[50%] md:translate-x-[50%] z-10">
         <Image
           src={"/green-pulsar2.png"}
           width={600}
@@ -13,11 +13,11 @@ const Showcase = () => {
           className="w-auto"
         />
       </div>
-      <div className="absolute left-[550px] top-[100px]">
-        <div className="object fixed">
-        <Spline scene="https://prod.spline.design/r-jlub9TfIL0Sl8y/scene.splinecode" />
-        </div>
-      </div>
+
+      <Spline
+        scene="https://prod.spline.design/r-jlub9TfIL0Sl8y/scene.splinecode"
+        className="md:fixed"
+      />
     </div>
   );
 };
