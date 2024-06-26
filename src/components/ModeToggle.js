@@ -7,10 +7,12 @@ const ModeToggle = () => {
 
   return (
     <div
-      className="border-[1px] border-black p-2 mx-1 rounded-full cursor-pointer"
+      className="mx-1 cursor-pointer rounded-full border-[1px] border-black p-2"
       onClick={toggle}
     >
-      <FaRegLightbulb className={`${mode == "dark" ? `text-white` : null}`} />
+      <FaRegLightbulb
+        className={`${mode == "dark" ? `text-yellow-400` : null} , text-xl`}
+      />
     </div>
   );
 };
