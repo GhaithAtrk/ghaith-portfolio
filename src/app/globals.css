@@ -33,7 +33,6 @@
   opacity: 1;
 }
 
-
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -47,12 +46,16 @@
 
 /*----------- Nav Item Effect -----------*/
 
-
 .nav-item:hover {
-  text-shadow: 0 0 5px #83f353, 0 0 15px #83f353, 0 0 20px #83f353,
-    0 0 40px #83f353, 0 0 60px #83f353, 0 0 10px #ff8d00, 0 0 98px #ff8d00;
+  text-shadow:
+    0 0 5px #83f353,
+    0 0 15px #83f353,
+    0 0 20px #83f353,
+    0 0 40px #83f353,
+    0 0 60px #83f353,
+    0 0 10px #ff8d00,
+    0 0 98px #ff8d00;
 }
-
 
 /*----------- Card Animation -----------*/
 
@@ -196,8 +199,14 @@
 
 /*----------- Projects Animation -----------*/
 
-.project-row {
+.project-container {
+  display: flex;
+}
+
+.project-row { 
   transition: width 0.3s ease;
+
+  /* background-color: pink; */
 }
 
 .project {
@@ -219,4 +228,8 @@
 .project:hover .info-layer {
   transition-delay: 0.5s;
   width: 95%;
+}
+
+.project-container:nth-child(even) {
+  justify-content: flex-end;
 }

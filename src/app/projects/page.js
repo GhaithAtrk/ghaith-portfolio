@@ -61,19 +61,19 @@ const Projects = () => {
     <div className="min-h-screen pt-32">
       <div className="relative mx-auto max-w-[1240px]">
         <div className="mb-20">
-          <h2 className="mx-4 mb-10 mt-4 text-xl md:text-4xl">
+          <h2 className="mx-4 mb-10 mt-4 text-xl md:text-5xl">
             Projects i have participated in..
           </h2>
           <div>
             {participated.map((data, index) => (
               <div className="project-container" key={index}>
-                <div className="project-row rounded-ful md:w-[600px]">
+                <div className="project-row my-20 rounded-full md:w-[600px]">
                   <Link
                     target={"_blank"}
                     href={data.siteLink}
                     className="w-fit"
                   >
-                    <div className="project relative my-40 min-w-[250px] cursor-pointer overflow-hidden rounded-full border-8 border-[#C4873C] bg-[#fdc158] md:w-[600px]">
+                    <div className="project relative min-w-[250px] cursor-pointer overflow-hidden rounded-full border-8 border-[#C4873C] bg-[#fdc158] md:w-[600px]">
                       <Image
                         src={data.siteImage}
                         width={600}
@@ -81,9 +81,9 @@ const Projects = () => {
                         alt=""
                         className="relative left-0 top-0 z-10 rounded-full"
                       />
-                      <div className="info-layer z-1 absolute left-0 top-0 flex h-full w-full items-center justify-end rounded-full bg-white/85 p-2 text-end font-bold md:w-[600px]">
+                      <div className="info-layer z-1 absolute left-0 top-0 flex h-full w-full items-center justify-end rounded-full bg-white/85 p-2 text-end md:w-[600px]">
                         <div className="max-w-[350px] px-2 text-center">
-                          <div className="my-2 text-xl">{data.siteName}</div>
+                          <div className="my-2 text-2xl font-bold">{data.siteName}</div>
                           <div className="text-md my-2 text-balance">
                             {data.description}
                           </div>
@@ -108,19 +108,19 @@ const Projects = () => {
             ))}
           </div>
           <div className="my-20">
-            <h2 className="mx-4 mb-10 mt-4 text-xl md:text-4xl">
-              Projects i did for practice in..
+            <h2 className="mx-4 mb-10 mt-4 text-xl md:text-5xl">
+              Projects i did for practice..
             </h2>
             <div>
               {practiced.map((data, index) => (
-                <div className="project-container" key={index}>
-                  <div className="project-row rounded-ful md:w-[600px]">
+                <div className="project-container flex justify-start" key={index}>
+                  <div className="project-row my-20 rounded-full md:w-[600px]">
                     <Link
                       target={"_blank"}
                       href={data.siteLink}
                       className="w-fit"
                     >
-                      <div className="project relative my-40 min-w-[250px] cursor-pointer overflow-hidden rounded-full border-8 border-[#C4873C] bg-[#fdc158] md:w-[600px]">
+                      <div className="project relative min-w-[250px] cursor-pointer overflow-hidden rounded-full border-8 border-[#C4873C] bg-[#fdc158] md:w-[600px]">
                         <Image
                           src={data.siteImage}
                           width={600}
@@ -128,9 +128,9 @@ const Projects = () => {
                           alt=""
                           className="relative left-0 top-0 z-10 rounded-full"
                         />
-                        <div className="info-layer z-1 absolute left-0 top-0 flex h-full w-full items-center justify-end rounded-full bg-white/85 p-2 text-end font-bold md:w-[600px]">
+                        <div className="info-layer z-1 absolute left-0 top-0 flex h-full w-full items-center justify-end rounded-full bg-white/85 p-2 text-end md:w-[600px]">
                           <div className="max-w-[350px] px-2 text-center">
-                            <div className="my-2 text-xl">{data.siteName}</div>
+                            <div className="my-2 text-2xl font-bold">{data.siteName}</div>
                             <div className="text-md my-2 text-balance">
                               {data.description}
                             </div>
