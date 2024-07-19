@@ -233,3 +233,54 @@
 .project-container:nth-child(even) {
   justify-content: flex-end;
 }
+
+
+/*----------- Cube Animation -----------*/
+
+.cube {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+  animation: animate 7s linear infinite;
+} 
+
+@media (max-width: 640px) {
+  .cube {
+    display: none;
+  }
+}
+
+@keyframes animate {
+  0% {transform: rotateX(-30deg) rotateY(0deg);}
+  100% {transform: rotateX(-30deg) rotateY(360deg);;}
+}
+
+.cube div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.cube div span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(rgb(10, 10, 10) , rgb(75, 179, 75));
+  transform: rotateY(calc(90deg * var(--i))) translateZ(49.7px);
+}
+
+.top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(10, 10, 10);
+  transform: rotateX(90deg) translateZ(50px);
+}
