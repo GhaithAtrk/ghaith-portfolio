@@ -13,7 +13,7 @@ const About = () => {
         <div
           className={` ${
             mode == "light" ? "bg-white/75" : "bg-black text-white"
-          } relative my-4 h-full rounded-md border-2 border-black p-6 leading-loose md:w-[950px]`}
+          } relative my-4  rounded-md border-2 border-black p-6 leading-loose md:w-[950px]`}
         >
           <div className="absolute right-10 top-10 sm:hidden md:block">
             <Cube />
@@ -33,17 +33,18 @@ const About = () => {
               </p>
               <br />
               <p>
-                React (Next.js) is what i use to build my projects and i always
-                try to learn what is new in the field and keep myself up to date
+                React (Next.js) is what i use to build my projects.
+                <br />
+                As well i am learning (Nest.js) for the back-end, hoping to become a full-stack developer
               </p>
               <br />
               <p>
-                I try to know learn about other concepts apart from web development
+                I try to learn about other concepts apart from web development
                 for the sake of curiosity from time to time
               </p>
               <br />
               <p>
-                I also care bout privacy and security and i hope to get in the
+                I also care about privacy and security and i hope to get in the
                 field of cyber security one day
               </p>
             </div>
